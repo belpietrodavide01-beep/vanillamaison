@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function AboutSection() {
   return (
     <section id="chi-siamo" className="w-full py-20 md:py-48 lg:py-56 px-6 lg:px-16" style={{ backgroundColor: '#faf9f6' }}>
-      <div className="max-w-7xl mx-auto bg-[#f8f8f8] rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 lg:p-12 flex flex-col lg:flex-row gap-12 lg:gap-20 items-center overflow-hidden">
+      <div className="max-w-7xl mx-auto bg-[#f8f8f8] rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 lg:p-12 flex flex-col-reverse lg:flex-row gap-12 lg:gap-20 items-center overflow-hidden">
         
         {/* Left Column (Image & Overlay) */}
         <motion.div 
