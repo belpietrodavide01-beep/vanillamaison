@@ -218,16 +218,16 @@ export default function Hero({ isMenuOpen, onNavigate }) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="text-black font-medium tracking-tight whitespace-nowrap gpu-layer"
+              className="text-black font-medium tracking-tight gpu-layer px-4"
               style={{
-                fontFamily: 'Montserrat, sans-serif', fontWeight: 300, letterSpacing: '0.05em', textTransform: 'uppercase', textTransform: 'uppercase',
-                fontWeight: 300,
-                fontSize: `clamp(2rem, ${7 * titleScale}vw, ${6.5 * titleScale}rem)`,
+                fontFamily: 'Montserrat, sans-serif', 
+                fontWeight: 300, 
+                letterSpacing: '0.05em', 
+                textTransform: 'uppercase',
+                fontSize: isMobile ? 'clamp(1.8rem, 8vw, 2.5rem)' : `clamp(2.5rem, ${7 * titleScale}vw, ${6.5 * titleScale}rem)`,
                 textShadow: '0 4px 30px rgba(255,255,255,0.8)',
-                maxWidth: '95vw',
+                maxWidth: '100%',
                 lineHeight: 1.1,
-                letterSpacing: '0.05em', textTransform: 'uppercase', textTransform: 'uppercase',
-                textTransform: 'uppercase'
               }}
             >
               arte del benessere
