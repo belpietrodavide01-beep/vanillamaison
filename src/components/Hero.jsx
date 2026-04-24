@@ -211,7 +211,7 @@ export default function Hero({ isMenuOpen, onNavigate }) {
           />
 
           <div
-            className={`absolute inset-x-0 flex flex-col items-center text-center px-6 z-30 ${isMobile ? 'top-[14%]' : 'top-[10%]'}`}
+            className={`absolute inset-x-0 flex flex-col items-center text-center px-10 z-30 ${isMobile ? 'top-[30%]' : 'top-[10%]'}`}
             style={{ pointerEvents: 'none', willChange: 'transform, opacity' }}
           >
             <motion.h1
@@ -224,10 +224,10 @@ export default function Hero({ isMenuOpen, onNavigate }) {
                 fontWeight: 300, 
                 letterSpacing: '0.05em', 
                 textTransform: 'uppercase',
-                fontSize: isMobile ? 'clamp(1.8rem, 8vw, 2.5rem)' : `clamp(2.5rem, ${7 * titleScale}vw, ${6.5 * titleScale}rem)`,
+                fontSize: isMobile ? 'clamp(1.4rem, 7vw, 1.8rem)' : `clamp(2.5rem, ${7 * titleScale}vw, ${6.5 * titleScale}rem)`,
                 textShadow: '0 4px 30px rgba(255,255,255,0.8)',
                 maxWidth: '100%',
-                lineHeight: 1.1,
+                lineHeight: 1.2,
               }}
             >
               arte del benessere
@@ -237,10 +237,10 @@ export default function Hero({ isMenuOpen, onNavigate }) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className={`text-black/80 max-w-lg font-light  gpu-layer ${isMobile ? 'mt-4' : 'mt-3'}`}
+              className={`text-black/80 max-w-lg font-light  gpu-layer hidden md:block mt-3`}
               style={{
                 fontFamily: 'Inter, sans-serif',
-                fontSize: isMobile ? '0.7rem' : 'clamp(0.8rem, 1.5vw, 1rem)',
+                fontSize: 'clamp(0.8rem, 1.5vw, 1rem)',
                 letterSpacing: '0.05em', 
                 textShadow: '0 0 20px rgba(255,255,255,0.6)',
                 lineHeight: 1.5
