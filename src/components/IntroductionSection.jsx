@@ -57,7 +57,7 @@ const IntroductionSection = () => {
   return (
     <section 
       ref={containerRef} 
-      className="relative lg:min-h-screen w-full flex flex-col items-center justify-start lg:justify-center overflow-hidden pt-20 lg:pt-0 pb-24 lg:pb-0 bg-[#faf9f6]"
+      className="relative lg:min-h-screen w-full hidden lg:flex flex-col items-center justify-start lg:justify-center overflow-hidden pt-20 lg:pt-0 pb-24 lg:pb-0 bg-[#faf9f6]"
     >
       {/* Decorative Assets - Rising Images */}
       {imageAssets.map((src, i) => (
