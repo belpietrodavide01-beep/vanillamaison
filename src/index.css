@@ -1,0 +1,79 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Editorial Heading Style - Updated to Montserrat Light */
+.editorial-heading { text-transform: uppercase !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(2.2rem, 7vw, 5.5rem) !important;
+  line-height: 1.2 !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.05em !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  max-width: 1000px !important;
+}
+
+.editorial-heading .reveal-item {
+  display: inline-block !important;
+}
+
+@keyframes marquee-vertical {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical 25s linear infinite;
+}
+
+.animate-marquee-vertical:hover {
+  animation-play-state: paused;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* GPU Optimization Layer Promotion */
+.gpu-layer {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+/* Fluid scroll helper - disabled empty rule to clear lint warning */
+/* .lenis-scrolling { } */
+
+/* Performance: Reduce painting of glass elements */
+.backdrop-blur-fix {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transform: translateZ(0);
+}
